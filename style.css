@@ -1,0 +1,14 @@
+body {
+    font-family: 'Slabo 27px', serif;
+    
+}
+main {
+    max-width: 60%;
+    margin: 0 auto;
+}
+th {
+   padding: 0 2.5% 0 2.5%;
+}
+td {
+   padding: 0 2% 0 2%; 
+}
