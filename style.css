@@ -15,6 +15,7 @@ h1 {
     color: #DE2DAE;
 }
 h2 {
+    margin-top: 8%;
     margin-bottom: 1.7%;
 }
 .button {
@@ -31,8 +32,14 @@ h2 {
     cursor: pointer;
 }
 p {
-    margin: 2%;
-    
+    margin: 2%;   
+}
+a {
+   
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
 }
 .top_wrap_1 {
     padding-right: 5%;
@@ -66,8 +73,10 @@ th {
     margin: 0 auto 5% auto;
     background-color: black;
     padding: 2% 5% 2% 5%;
-    border-radius: 0 0 20% 20%;  
+      
 }
 .footer_text {
     color: white;
+    margin: 2%;
+   
 }

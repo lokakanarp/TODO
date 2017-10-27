@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>TO-DO</title>
 
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 </head>
 
@@ -15,13 +15,11 @@
             <div class="top_wrap_1">
                 <form method="POST">
                     <h1>Lokas att göra-lista</h1>
-                    <p>Lägg till uppgift:
-                        <p>
+                    <p>Lägg till uppgift:<p>
                             <p><input type="text" name="title"></p>
                             <p>Skapad av:</p>
                             <p><input type="text" name="createdBy"></p>
                             <input class="button" type="submit" value="Skicka" />
-
                 </form>
             </div>
             <div class="top_wrap_2">
@@ -31,7 +29,7 @@
 
             <?php
             require 'database.php'; 
-            if(isset($_POST["title"])) {
+            if(isset($_POST["title"]) && isset($_POST["createdBy"])) {
                 $statement = $pdo->prepare(
                     "INSERT INTO todo_list (title, createdBy)
                     VALUES (:title, :createdBy)");
@@ -103,29 +101,28 @@
                         <th>Skapad av</th>
                     </tr>
                     <?php
-                foreach($todo_list as $i){ ?>
+                foreach($todo_list as $i){ 
+                    if($i['completed']) { ?>
                         <tr>
                             <td>
-                                <?php if($i['completed'] == 1){
-                                        echo $i['id']; }?>
+                            <?php echo $i['id']; ?>
                             </td>
                             <td>
-                                <?php if($i['completed'] == 1){ 
-                                    echo $i['title']; 
-                                    } ?>
+                            <?php echo $i['title']; ?>
                             </td>
                             <td>
-                                <?php if($i['completed'] == 1){
-                                          echo $i['createdBy']; }?>
+                            <?php echo $i['createdBy']; ?>           
                             </td>
                         </tr>
-                        <?php } ?>
+                        <?php }
+                      }?>
                 </table>
         </main>
     </div>
     <div class="footer">
         <footer>
-            <p class="footer_text">hejhej</p>
+            <a class="footer_text" href="https://github.com/lokakanarp">GitHub: Loka Kanarp</a><br>
+            <a class="footer_text" href="https://github.com/lokakanarp/TODO">GitHub: TODO Repository</a>
         </footer>
     </div>
 
