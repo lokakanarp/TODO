@@ -23,7 +23,7 @@
                 </form>
             </div>
             <div class="top_wrap_2">
-                <img src="cat.jpg">
+                <img src="images/cat.jpg">
             </div>
             <div class="clear"></div>
 

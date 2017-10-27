@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto Slab', serif;
     font-weight: 300;
-    background-image: url(cork-board.jpg);    
+    background-image: url(images/cork-board.jpg);    
 }
 .wrapper {
     max-width: 50%;
