@@ -122,7 +122,7 @@
     <div class="footer">
         <footer>
             <a class="footer_text" href="https://github.com/lokakanarp">GitHub: Loka Kanarp</a><br>
-            <a class="footer_text" href="https://github.com/lokakanarp/TODO">GitHub: TODO Repository</a>
+            <a class="footer_text" href="https://github.com/lokakanarp/TO-DO">GitHub: TODO Repository</a>
         </footer>
     </div>
 
